@@ -14,6 +14,12 @@ export default function Home() {
           <p className="text-center">{dataset.name}</p>
         </Card>
       ))}
+        {datasets?.map((dataset) => (
+        <Card className="mx-auto" key={dataset.name}>
+          <p className="text-center">{dataset.name}</p>
+        </Card>
+      ))}
     </div>
+    
   );
 }

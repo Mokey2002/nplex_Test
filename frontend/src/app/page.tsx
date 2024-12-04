@@ -2,10 +2,13 @@
 
 import { useDatasets } from "@/lib/dataset";
 import { Card } from "@tremor/react";
+import React from 'react';
+import Plot from 'react-plotly.js';
 
 export default function Home() {
   const { datasets } = useDatasets();
 
+  
   return (
     <div className="flex flex-col items-center space-y-5">
       <h1 className="text-xl">Datasets</h1>
@@ -19,6 +22,7 @@ export default function Home() {
           <p className="text-center">{dataset.name}</p>
         </Card>
       ))}
+    
     </div>
     
   );

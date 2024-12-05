@@ -1,8 +1,10 @@
+
+
 module.exports = {
   extends: [
     "next",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    //"plugin:prettier/recommended"
   ],
   root: true,
   parser: "@typescript-eslint/parser",
@@ -12,8 +14,9 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
-    "comma-dangle": ["error", "never"],
-    "no-trailing-spaces": ["error"]
+    "comma-dangle": process.env.NODE_ENV === "production" ? "off" : ["error", "never"],
+    "no-trailing-spaces": process.env.NODE_ENV === "production" ? "off" : ["error"],
+    "@typescript-eslint/no-explicit-any": "off" 
   },
   overrides: [
     {

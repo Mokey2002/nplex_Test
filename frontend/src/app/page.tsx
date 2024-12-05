@@ -2,8 +2,8 @@
 
 import { useDatasets } from "@/lib/dataset";
 import { Card } from "@tremor/react";
-import React from 'react';
-import Plot from 'react-plotly.js';
+import React from "react";
+
 
 export default function Home() {
   const { datasets } = useDatasets();
